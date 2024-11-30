@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>3D Windmill</title>
+  <link href='johnnycss.css' rel='stylesheet' type='text/css'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo"><a>Travel</a></div>
+    <ul>
+      <li><a href="main pagejs.html">Home</a></li>
+      <li>
+        <a>Select Country</a>
+        <div class="dropdown">
+          <a href="egypt.html">Egypt</a>
+          <a href="holland.html">Holland</a>
+          <a href="Japan.html">Japan</a>
+          <a href="Australia.html">Australia</a>
+        </div>
+      </li>
+      <li>
+        <a>Helping center</a>
+        <div class="dropdown">
+          <a href="advise.html">Advise</a>
+          <a href="comment.html">Comment</a>
+        </div>
+      </li>
+      <li><a href="signin.html">Sign in</a></li>
+    </ul>
+  </div>
+<div class="johnny-container">
+  <div class="johnny-carousel">
+    <div class="johnny-item johnny-a">
+      <a href="egypt.html">
+        <img class="johnny-img" src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcRKCLFdXHC8vBL65kMH7D24iRTu2L8uGBaXmXzGw0TFPhqHD3CSubYMGIMk8U52QxrGhqDbDA2z9oA130OSI4dBmCnf7bOtbX-i3iBnHw" alt="Image 1">
+      </a>
+    </div>
+    <div class="johnny-item johnny-b">
+      <a href="holland.html">
+        <img class="johnny-img" src="hoe.jpg" alt="Image 2">
+      </a>
+    </div>
+    <div class="johnny-item johnny-c">
+      <a href="Japan.html">
+        <img class="johnny-img" src="jae.jpg" alt="Image 3">
+      </a>
+    </div>
+    <div class="johnny-item johnny-d">
+      <a href="Australia.html">
+        <img class="johnny-img" src="aue.webp" alt="Image 4">
+      </a>
+    </div>
+  </div>
+  <button class="johnny-prev">Prev</button>
+  <button class="johnny-next">Next</button>
+</div>
+
+
+  <div class="two-column-layout">
+    <!-- Left Column (70%) -->
+    <div class="column-70">
+      <h1 id="johnny-adv">Time Zone Guide</h1>
+      <div id="container">
+        <img id="worldMap" src="world.png">
+        <canvas id="curveCanvas"></canvas>
+      </div>
+    </div>
+
+    <!-- Right Column (30%) -->
+    <div class="column-30">
+      <div class="info-box">
+        <h1 id="johnny-adv">Government of Canada Travel Advisories</h1>
+        <button id="johnny-toggle-button">Show Advisories</button>
+        <iframe id="johnny-advisory-iframe" src="https://travel.gc.ca/travelling/advisories" style="display: none;"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

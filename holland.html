@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>3D Windmill</title>
+  <link href='johnnycss.css' rel='stylesheet' type='text/css'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+  <style>
+   $wheel: #41155a;
+    $roof: #df615c;
+    $roofLight: #edadac;
+    $mill: #fff;
+
+    body {
+      background-color: #eee;
+    }
+    .windmill {
+      position: absolute;
+      left: 30%;
+      top: 20%;
+    }
+
+    .hills {
+      width: 280px;
+      height: 180px;
+      background-color: #edadac;
+      position: absolute;
+      top: 64px;
+      left: -110px;
+      opacity: 0.5;
+      border-radius: 300px 300px 0 0;
+    }
+
+    .wheel {
+      z-index: 10;
+      width: 192px;
+      height: 192px;
+      position: absolute;
+      left: 8px;
+      top: 10px;
+      animation: spin 15s linear infinite;
+    }
+
+    .windwheel {
+      position: absolute;
+      width: 8px;
+      height: 100px;
+      background-color: #41155a;
+      margin-right: 10px;
+      left: 92px;
+    }
+
+    .windwheel2 {
+      transform: rotate(90deg);
+      top: 46px;
+      left: 138px;
+      z-index: 40;
+    }
+
+    .windwheel3 {
+      transform: rotate(180deg);
+      top: 92px;
+    }
+
+    .windwheel4 {
+      transform: rotate(-90deg);
+      top: 46px;
+      left: 46px;
+    }
+
+    .roof {
+      position: absolute;
+      z-index: 9;
+      left: 52px;
+      top: 55px;
+      width: 0; 
+      height: 0; 
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-bottom: 70px solid #df615c;
+    }
+
+    .mill {
+      position: absolute;
+      left: 52px;
+      top: 124px;
+      width: 100px;
+      height: 120px;
+      background-color: #fff;
+    }
+
+    .house {
+      position: absolute;
+      width: 80px;
+      height: 60px;
+      background-color: #fff;
+      top: 164px;
+      left: 152px;
+      border-top: 20px solid #df615c;
+    }
+
+    .bush {
+      position: relative;
+      top: 203px;
+      left: -60px;
+    }
+
+    .tree {
+      position: absolute;
+      left: -50px;
+      top: 120px;
+    }
+
+    .cloud {
+      position: absolute;
+      top: 40px;
+      left: -100px;
+      background-color: #fff;
+      height: 20px;
+      width: 40px;
+      z-index: 1000;
+      border-radius: 40px 40px 0 0;
+      opacity: 0.7;
+      animation: clouds 14s linear alternate infinite;
+    }
+
+    @keyframes spin {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes clouds {
+      100% {
+        transform: translateX(340px);
+      }
+    }
+.jumping-textho {
+    margin-top: 150px;
+    font-size: 4rem; /* Makes the text larger */
+    font-weight: bold;
+    background: linear-gradient(90deg, #21468B, #FFFFFF, #FF0000); /* Colors representing the Dutch flag */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Makes the gradient visible */
+    animation: jump 1s ease-in-out infinite;
+    display: inline-block;
+}
+
+  </style>
+</head>
+<body id='tesbody'>
+      <div class="navbar">
+    <div class="logo"><a>Travel</a></div>
+    <ul>
+      <li><a href="main pagejs.html">Home</a></li>
+      <li>
+        <a>Select Country</a>
+        <div class="dropdown">
+          <a href="egypt.html">Egypt</a>
+          <a href="holland.html">Holland</a>
+          <a href="Japan.html">Japan</a>
+          <a href="Australia.html">Australia</a>
+        </div>
+      </li>
+      <li>
+        <a>Helping center</a>
+        <div class="dropdown">
+          <a href="advise.html">Advise</a>
+          <a href="comment.html">Comment</a>
+        </div>
+      </li>
+      <li><a href="signin.html">Sign in</a></li>
+    </ul>
+  </div>
+
+  
+  <div class="jumping-textho">Holland</div>
+  
+  <div class="windmill">
+    <div class="hills"></div>
+    <div class="wheel">
+      <div class="windwheel"></div>
+      <div class="windwheel windwheel2"></div>
+      <div class="windwheel windwheel3"></div>
+      <div class="windwheel windwheel4"></div>
+    </div>
+    <div class="roof"></div>
+    <div class="mill"></div>
+    <div class="house"></div>
+  </div>
+
+
+  <div class="Johnny-con">
+    <div class="Johnny-img">
+      <div class="johnny-animated-imageho"></div>
+    </div>
+    <div class="Johnny-content">
+      <h2 style='font-size: 300%;'>The Windmills of Holland</h2>
+      <p style='font-size:130%'>The windmills of Holland are a key part of Dutch heritage and a symbol of the country's enduring history of water management and land reclamation. There are about 1,200 windmills still standing in the Netherlands today, with the famous ones located at Kinderdijk and Zaanse Schans. These iconic structures were originally used for pumping water, grinding grain, and sawing wood.
+
+One of the most famous windmills is the Molen de Gooyer in Amsterdam. The windmills at Kinderdijk were built around 1740 and are a UNESCO World Heritage site. These mills played a crucial role in controlling floods and ensuring that land could be used for farming and habitation.</p>
+    </div>
+  </div>
+  <br>
+
+  <div class="Johnny-con">
+    <div class="Johnny-img">
+      <img  id='img2' src='https://myhiddengems.co.uk/wp-content/uploads/2014/07/Alkmaar-9.jpg' alt='Kinderdijk Windmills'>
+      <button onclick='showRiddle()' style='font-size:130%'>Riddle</button>
+      <input type='text' id='answer' placeholder="Type your answer here">
+      <button onclick="checkAnswer()" style='font-size:130%'>Check Answer</button>
+      <p id='riddle'></p>
+    </div>
+    <div class="Johnny-content">
+      <h2 style='font-size: 300%;'>Dutch Cheese Markets</h2>
+      <p style='font-size:130%'>The Netherlands is famous for its cheese, particularly Gouda and Edam. Dutch cheese markets are a great way to experience this cheese culture. The most famous cheese markets are held in Gouda, Alkmaar, and Edam. In these traditional cheese markets, large wheels of cheese are bought and sold in a lively ceremony that dates back hundreds of years.
+
+These markets are not only a place to buy cheese but also a social and cultural event that attracts tourists from around the world. The market at Alkmaar dates back to 1593, making it one of the oldest cheese markets still in existence today.</p>
+    </div>
+  </div>
+
+  <script>
+    function showRiddle() {
+      // Display the riddle in the #riddle element
+      document.getElementById('riddle').innerText = "What has cities but no houses, forests but no trees, and rivers but no water?";
+      alert("Riddle is now displayed!"); // Alert to confirm the riddle was displayed
+    }
+
+    function checkAnswer() {
+      // Get the user's answer
+      let userAnswer = document.getElementById('answer').value.trim().toLowerCase();
+     
+      // Correct answer
+      let correctAnswer = "map";
+
+      // Check if the answer is correct
+      if (userAnswer === correctAnswer) {
+        document.getElementById('riddle').innerText = "Correct, you can live!";
+        alert("Correct, you can live!"); // Alert to confirm correct answer
+      } else if (userAnswer !== "") {
+        alert("Incorrect answer,windmill blow you away..."); // Alert before redirecting
+        // Redirect to index.html if the answer is incorrect and input is not empty
+        window.location.href = "index.html";
+      }
+    }
+  </script>
+</body>
+</html>

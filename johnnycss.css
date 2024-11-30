@@ -1,0 +1,553 @@
+*{font-family: 'EB Garamond'} 
+/* General Styles */
+body {
+  font-family: 'EB Garamond', serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('map.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+ center {
+
+    font-size: 70px;
+    color: blue;
+}
+}
+  h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 36px;
+            color: #222;
+            text-shadow: 2px 2px 2px grey;
+        }
+
+a {text-align: center;
+    text-decoration: none;
+    color:blue;
+}
+a:hover p{
+    color:red;
+    font-size:120%;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar .logo a {
+  color: green;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+@keyframes bounce {
+  0%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  position: relative;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+.navbar ul li:hover .dropdown {
+  display: block;
+}
+
+
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  min-width: 150px;
+}
+
+.dropdown a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown a:hover {
+  background-color: #555;
+}
+
+
+
+#johnny-toggle-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#johnny-toggle-button:hover {
+  background-color: #0056b3;
+}
+
+#johnny-advisory-iframe {
+  width: 100%;
+  height: 300px;
+  margin-top: 10px;
+  border: none;
+}
+
+
+#johnny-body1 {
+
+
+  font: 15px/20px;
+}
+
+/* Container for the carousel */
+.johnny-container {
+  padding-top: 50px;
+  margin: 0 auto;
+  width: 250px;
+  height: 200px;
+  position: relative;
+  perspective: 1000px;
+  perspective-origin: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Carousel container */
+.johnny-carousel {
+  height: 100%;
+  width: 250px; /* Match the width of the container */
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s ease-in-out;
+}
+
+/* Carousel items */
+.johnny-item {
+  display: block;
+  position: absolute;
+  background: #000;
+  width: 250px;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.johnny-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 3D positions of each carousel item */
+.johnny-a {
+  transform: rotateY(0deg) translateZ(250px);
+}
+
+.johnny-b {
+  transform: rotateY(90deg) translateZ(250px);
+}
+
+.johnny-c {
+  transform: rotateY(180deg) translateZ(250px);
+}
+
+.johnny-d {
+  transform: rotateY(270deg) translateZ(250px);
+}
+
+/* Carousel buttons */
+.johnny-next,
+.johnny-prev {
+  color: white;
+  background-color: #444;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  position: absolute;
+  z-index: 10; /* Ensure buttons are above the carousel */
+}
+
+.johnny-prev {
+  left: -300px; /* Position to the left of the carousel */
+}
+
+.johnny-next {
+  right: -300px; /* Position to the right of the carousel */
+}
+
+.johnny-next:hover,
+.johnny-prev:hover {
+  background-color: #666;
+}
+
+.johnny-next:active,
+.johnny-prev:active {
+  transform: scale(0.95);
+}
+
+    .zoom-in {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(1);
+      animation: zoomInEffect 2s forwards;
+      z-index: 1000;
+    }
+
+    @keyframes zoomInEffect {
+      0% {
+        transform: translate(-50%, -50%) scale(1);
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(5); /* Scale to fill the viewport */
+      }
+    }
+
+    /* Rotate while zooming out */
+    @keyframes zoomOutRotate {
+      0% {
+        transform: scale(5) rotate(0deg);
+      }
+      100% {
+        transform: scale(0) rotate(360deg);
+      }
+    }
+  
+
+#tesbody {
+  
+  
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.johnny-stage-mike {
+  width: 0px;
+  height: 0px;
+  position: relative;
+  margin-left:300px;
+  margin-top:30px;
+  -webkit-perspective: 1200px;
+  -webkit-perspective-origin: 50% 50%;
+  perspective: 1200px;
+  perspective-origin: 50% 50%;
+}
+
+.johnny-pyramid3d-karen {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: rotateX(75deg) rotate(65deg);
+  transform: rotateX(75deg) rotate(65deg);
+  -webkit-animation: spin-pyramid-alex 10s linear infinite;
+  animation: spin-pyramid-alex 10s linear infinite;
+}
+
+.johnny-triangle-ash {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  width: 0;
+  height: 0;
+  background: none;
+}
+
+.johnny-triangle-ash:before {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-style: solid;
+  border-width: 176px 75px 0 75px;
+}
+
+/* Positioning each face of the pyramid */
+.johnny-side1-dylan {
+  -webkit-transform: translatex(0) rotatey(115.2deg) rotatez(90deg);
+  transform: translatex(0) rotatey(115.2deg) rotatez(90deg);
+}
+
+.johnny-side2-luke {
+  -webkit-transform: translatex(150px) rotatez(90deg) rotatex(64.8deg);
+  transform: translatex(150px) rotatez(90deg) rotatex(64.8deg);
+}
+
+.johnny-side3-anna {
+  -webkit-transform: translatez(0) rotatex(64.8deg);
+  transform: translatez(0) rotatex(64.8deg);
+}
+
+.johnny-side4-sara {
+  -webkit-transform: translatey(150px) rotatex(115.2deg);
+  transform: translatey(150px) rotatex(115.2deg);
+}
+
+/* Colors for each side */
+.johnny-side1-dylan:before {
+  border-color: rgba(218, 165, 32, 0.8) transparent transparent transparent;
+}
+
+.johnny-side2-luke:before {
+  border-color: rgba(184, 134, 11, 0.8) transparent transparent transparent;
+}
+
+.johnny-side3-anna:before {
+  border-color: rgba(205, 173, 0, 0.8) transparent transparent transparent;
+}
+
+.johnny-side4-sara:before {
+  border-color: rgba(160, 120, 0, 0.8) transparent transparent transparent;
+}
+
+@-webkit-keyframes spin-pyramid-alex {
+  100% {
+    -webkit-transform: rotateX(75deg) rotate(425deg);
+  }
+}
+
+@keyframes spin-pyramid-alex {
+  100% {
+    transform: rotateX(75deg) rotate(425deg);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 300px) {
+  .johnny-stage-mike {
+    -webkit-transform: scale(0.05);
+    transform: scale(0.05);
+  }
+}
+
+@media (max-width: 600px) {
+  .johnny-stage-mike {
+    -webkit-transform: scale(0.55);
+    transform: scale(0.55);
+  }
+}
+
+@media (min-width: 600px) {
+  .johnny-stage-mike {
+    -webkit-transform: scale(0.68);
+    transform: scale(0.68);
+  }
+}
+
+@media (min-width: 880px) {
+  .johnny-stage-mike {
+    -webkit-transform: scale(0.85);
+    transform: scale(0.85);
+  }
+}
+
+
+
+
+#gameContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ccc;
+}
+
+#nextButton {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#nextButton:hover {
+    background-color: #0056b3;
+}
+.johnny-animated-image {
+  width: 100%; /* Set the width and height */
+  height: 100%;
+  background-image: url('py1.jpg');
+  background-size: cover;
+  transition: all 0.5s ease; /* Transition for smooth hover effect */
+}
+
+.johnny-animated-image:hover {
+  animation: imageChange 8s ease-in-out infinite; /* Animation on hover */
+}
+
+@keyframes imageChange {
+  0%,15% {
+    background-image: url('py2.jpg')}
+  20%,35%{
+    background-image: url('py3.jpg');
+  }
+  40%,55% {
+    background-image: url('py4.webp');
+  }
+  60%,77%{
+    background-image: url('py5.jpg');
+  }
+  82%,100% {
+    background-image: url('py6.jpg')}
+}
+
+.johnny-animated-imageho {
+  width: 100%; /* Set the width and height */
+  height: 100%;
+  background-image: url('wi1.jpg');
+  background-size: cover;
+  transition: all 0.5s ease; /* Transition for smooth hover effect */
+}
+
+.johnny-animated-imageho:hover {
+  animation: imageChangeho 8s ease-in-out infinite; /* Animation on hover */
+}
+
+@keyframes imageChangeho {
+  0%,15% {
+    background-image: url('wi2.jpg');
+  }
+  20%,35%{
+    background-image: url('wi3.jpg')}
+  40%,55% {
+    background-image: url('wi4.jpg');
+  }
+  60%,77%{
+    background-image: url('wi5.jpg');
+  }
+  82%,100% {
+    background-image: url('wi6.jpg');
+  }
+}
+
+  .jumping-text {
+    margin-top:100px;
+  font-size: 4rem; /* Makes the text larger */
+  font-weight: bold;
+  background: linear-gradient(90deg, #FF0000, #FFFFFF, #000000, #FFD700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Makes the gradient visible */
+  animation: jump 1s ease-in-out infinite;
+  display: inline-block;
+}
+  
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Makes the text "jump" */
+  }
+}
+  #answer{font-size:130%}
+     .Johnny-con {
+            display: flex;
+            margin-top: 200px;
+            height: 500px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .Johnny-img {
+            width: 30%;
+            padding: 10px;
+           
+        }
+        .Johnny-content{
+            width: 70%;
+            padding: 0px;
+          
+        }
+  #img2{width:350px}
+
+
+  #container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+#worldMap {
+  width: 100%;
+  height: 150%;
+}
+
+#curveCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+   .two-column-layout {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  margin-top:50px;
+}
+
+.column-70 {
+  flex: 0 0 60%;
+  position: relative;  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height:540px;
+}
+
+.column-30 {
+  flex: 0 0 30%;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
